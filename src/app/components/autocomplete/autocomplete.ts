@@ -368,7 +368,7 @@ export class AutoComplete implements AfterViewInit,AfterViewChecked,DoCheck,Cont
                     this.panelEL.nativeElement.style.minWidth = this.domHandler.getWidth(this.el.nativeElement.children[0]) + 'px';
                 }
                 this.panelEL.nativeElement.style.zIndex = ++DomHandler.zindex;
-                this.domHandler.fadeIn(this.panelEL.nativeElement, 200);
+                //this.domHandler.fadeIn(this.panelEL.nativeElement, 200);
                 this.bindDocumentClickListener();
             }   
         }
@@ -470,6 +470,7 @@ export class AutoComplete implements AfterViewInit,AfterViewChecked,DoCheck,Cont
                         this.selectItem(this.highlightOption);
                     }
                     this.hide();
+                    event.preventDefault();
                 break;
             }
         } else {
